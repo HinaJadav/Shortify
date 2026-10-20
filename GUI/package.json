@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "eslint-config-expo": "~57.0.2",
     "expo": "~57.0.30",
     "expo-status-bar": "~57.0.1",
     "react": "19.2.3",
@@ -10,11 +11,18 @@
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "eslint": "^9.39.5",
+    "eslint-config-expo": "~57.0.2",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.9.10",
     "typescript": "~6.0.3"
   },
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android"
+    "android": "expo start --android",
+    "lint": "expo lint",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "private": true
 }
