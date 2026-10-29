@@ -5,6 +5,7 @@ This is Shortify: an Android-only, offline key → value snippet app built with 
 Follow AGENTS.md. If it conflicts with this file, this file wins. Items marked ⚠️ in any doc are unconfirmed: ask me, don't treat them as facts.
 
 ## Rules
+
 - I make all architecture decisions (schema, folders, state management, libraries, Kotlin ↔ RN data sharing). Ask first, let me propose, then review: point out problems and trade-offs, never decide for me.
 - One phase at a time. Designing ahead is fine; building ahead is not.
 - I write the core logic of each topic first; then you review and fix it.
@@ -20,16 +21,18 @@ Follow AGENTS.md. If it conflicts with this file, this file wins. Items marked �
 - Don't run `npm audit fix --force`.
 
 ## Quality criteria
+
 - `npm run lint`, `npm run typecheck` and `npm run format:check` all pass before a task is called done.
 - The app opens in Expo Go on my phone without an error screen.
 
 ## Routing table
-| When looking for | Look into |
-|---|---|
-| Environment, project facts, architecture, data model, decisions log, gotchas | docs/internal_documentation.md |
-| Phases, subtasks, progress, open decisions, out of scope | docs/roadmap.md |
-| Feature designs | docs/design/*.md |
-| Learning notes | knowledge.md |
-| Entry type | src/types/entry.ts |
-| Routes / screen code | src/app/ (thin routes) → src/screens/ |
-| Learning checklist (§1–§19) | Notion: "React Native Developer — Complete Topic Checklist" |
+
+| When looking for                                                             | Look into                                                   |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Environment, project facts, architecture, data model, decisions log, gotchas | docs/internal_documentation.md                              |
+| Phases, subtasks, progress, open decisions, out of scope                     | docs/roadmap.md                                             |
+| Feature designs                                                              | docs/design/*.md                                            |
+| Learning notes                                                               | knowledge.md                                                |
+| Entry type                                                                   | src/types/entry.ts                                          |
+| Routes / screen code                                                         | src/app/ (thin routes) → src/screens/                       |
+| Learning checklist (§1–§19)                                                  | Notion: "React Native Developer — Complete Topic Checklist" |

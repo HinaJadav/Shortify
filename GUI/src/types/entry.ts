@@ -5,5 +5,5 @@ export interface Entry {
   isPinned: boolean;
   useCount: number;
   createdAt: number;
-  updatedAt: string;
+  updatedAt: number;
 }
