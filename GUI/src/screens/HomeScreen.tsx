@@ -1,5 +1,6 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native';
+import { FlatList, StyleSheet, View } from 'react-native';
 import { Entry } from '../types/entry';
+import EntryRow from '../components/EntryRows';
 
 const now = Date.now();
 
@@ -48,16 +49,7 @@ export default function HomeScreen() {
       <FlatList
         data={SAMPLE_ENTRIES}
         keyExtractor={(item) => String(item.id)}
-        renderItem={({ item }) => (
-          <View style={styles.row}>
-            <Text style={styles.key}>
-              {item.isPinned ? '📌 ' : ''}
-              {item.key}
-            </Text>
-            <Text>{item.value}</Text>
-            <Text style={styles.meta}>Used {item.useCount} times</Text>
-          </View>
-        )}
+        renderItem={({ item }) => <EntryRow entry={item} />}
       />
     </View>
   );
@@ -65,7 +57,4 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1 },
-  row: { padding: 16, borderBottomWidth: 1, borderBottomColor: '#ddd' },
-  key: { fontWeight: 'bold', marginBottom: 4 },
-  meta: { color: 'gray', fontSize: 12, marginTop: 4 },
 });
