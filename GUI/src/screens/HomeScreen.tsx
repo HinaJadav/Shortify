@@ -1,18 +1,21 @@
 import { FlatList, StyleSheet, View } from 'react-native';
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from 'react-native-safe-area-context';
 
-import EntryRow from '../components/EntryRows';
 import useEntries from '../hooks/useEntries';
 import AddEntryForm from '../components/AddEntryForm';
-import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
+import EntryRow from '../components/EntryRow';
 
 export default function HomeScreen() {
   const { entries, deleteEntry, addEntry } = useEntries();
 
-   const insets = useSafeAreaInsets(); // NEW (temporary)
-  console.log('insets', insets);      // NEW (temporary)
+  const insets = useSafeAreaInsets(); // NEW (temporary)
+  console.log('insets', insets); // NEW (temporary)
 
   return (
-    <SafeAreaView style={styles.container} edges={['bottom','left','right']}>
+    <SafeAreaView style={styles.container} edges={['bottom', 'left', 'right']}>
       <AddEntryForm onAdd={addEntry} />
       <FlatList
         data={entries}
@@ -20,8 +23,8 @@ export default function HomeScreen() {
         renderItem={({ item }) => (
           <EntryRow entry={item} onDelete={deleteEntry} />
         )}
+        keyboardShouldPersistTaps="handled"
       />
-
     </SafeAreaView>
   );
 }

@@ -4,6 +4,7 @@ Checklist = owner's Notion "React Native Developer — Complete Topic Checklist"
 Each subtask is about 30–40 minutes. Architecture decisions are made before or at the start of their phase.
 
 ## Phases and progress
+
 - **Phase 0, Setup (§3, §15)**: ✅ done. Expo + TS, ESLint/Prettier, CLAUDE.md, scripts, running in Expo Go. Moved later: development build (Phase 4), Logcat (Phase 4), error boundaries (Phase 8).
 - **Phase 1, Local app, no storage (§2, §3, §5, §6)**: ⏳ in progress. Subtasks:
   - 1.0 ✅ Install Expo Router and restructure (`src/app/_layout.tsx`, thin `index.tsx` → `src/screens/HomeScreen.tsx`). `_layout.tsx` was missed at first and added during 1.4a.
@@ -26,6 +27,7 @@ Each subtask is about 30–40 minutes. Architecture decisions are made before or
 - **Phase 8, Ship (§15, §16, §17):** error boundary, tests, release APK.
 
 ## Open architecture decisions
+
 - Phase 1: all decided (A1–A3, plus B1/B1a brought forward).
 - Phase 2: B2 screens and params · B3 form validation (manual or React Hook Form + Zod) · B4 how screens share entries
 - Phase 3: C1 DB schema · C2 SQLite library · C3 DB file location · C4 migrations · C5 data layer API · C6 state management
@@ -36,7 +38,9 @@ Each subtask is about 30–40 minutes. Architecture decisions are made before or
 - Phase 8: H1 test stack · H2 release signing
 
 ## Hooks practice map (§2)
+
 useState ✅ practised · useEffect (basics practised; real use in Phase 3 loading) · useRef (Phase 2 focus) · useContext (1.8 theme) · useReducer (Phase 3, if chosen) · useMemo/useCallback (1.5 search, Phase 7) · custom hooks (1.3 useEntries)
 
 ## Out of scope
+
 iOS, web, cloud sync, login, tags/folders, {date} placeholders, biometric lock, typed "/cst" trigger (needs a full custom keyboard), Sentry.

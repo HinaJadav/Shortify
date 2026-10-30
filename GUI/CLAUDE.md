@@ -7,6 +7,7 @@ This is Shortify: an Android-only, offline key → value snippet app built with 
 Follow AGENTS.md. If it conflicts with this file, this file wins. Items marked ⚠️ in any doc are unconfirmed: ask me, don't treat them as facts.
 
 ## Rules
+
 - I make all architecture decisions (schema, folders, state management, libraries, Kotlin ↔ RN data sharing). Ask first, let me propose, then review: point out problems and trade-offs, never decide for me.
 - One phase at a time. Designing ahead is fine; building ahead is not.
 - For each subtask: (1) explain the topic briefly with an example, (2) I write the code, (3) you review and fix, (4) suggest a commit, (5) tell me which checklist topics I can now tick. If I have no experience with a topic, give me a full worked example first, then a small task to write myself.
@@ -24,7 +25,9 @@ Follow AGENTS.md. If it conflicts with this file, this file wins. Items marked �
 - Don't run `npm audit fix --force`.
 
 ## Teaching (I'm learning each topic for the first time)
+
 Teach like a patient teacher, not a reference. Every new topic is complete enough that I can explain it out loud in an interview. Cover, in this order:
+
 1. **The problem**: what goes wrong without it, using a concrete case from this app.
 2. **Mental model**: what it is, with an everyday analogy. Don't compare with .NET/C#.
 3. **How it works inside**: step by step, what React/RN actually does; a small diagram when it helps.
@@ -33,19 +36,21 @@ Teach like a patient teacher, not a reference. Every new topic is complete enoug
 6. **Common mistakes**: what beginners get wrong and what the symptom looks like.
 7. **Interview questions**: 2–3 likely questions with model answers.
 8. **Check my understanding**: ask me 2–3 questions and wait for my answers before moving on. Only tell me to tick a checklist topic after I answer correctly.
-Define every new term the first time it appears. Never say "this is just X" without explaining X. If I say an explanation was not clear, re-explain it a different way instead of repeating it.
+   Define every new term the first time it appears. Never say "this is just X" without explaining X. If I say an explanation was not clear, re-explain it a different way instead of repeating it.
 
 ## Quality criteria
+
 - `npm run lint`, `npm run typecheck` and `npm run format:check` all pass before a task is called done.
 - The app opens in Expo Go on my phone without an error screen.
 
 ## Routing table
-| When looking for | Look into |
-|---|---|
-| Environment, project facts, architecture, data model, decisions log, gotchas | docs/internal_documentation.md |
-| Phases, subtasks, progress, open decisions, out of scope | docs/roadmap.md |
-| Feature designs | docs/design/*.md |
-| Learning notes | knowledge.md |
-| Entry type | src/types/entry.ts |
-| Routes / screen code | src/app/ (thin routes) → src/screens/ |
-| Learning checklist (§1–§19) | Notion: "React Native Developer — Complete Topic Checklist" |
+
+| When looking for                                                             | Look into                                                   |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| Environment, project facts, architecture, data model, decisions log, gotchas | docs/internal_documentation.md                              |
+| Phases, subtasks, progress, open decisions, out of scope                     | docs/roadmap.md                                             |
+| Feature designs                                                              | docs/design/*.md                                            |
+| Learning notes                                                               | knowledge.md                                                |
+| Entry type                                                                   | src/types/entry.ts                                          |
+| Routes / screen code                                                         | src/app/ (thin routes) → src/screens/                       |
+| Learning checklist (§1–§19)                                                  | Notion: "React Native Developer — Complete Topic Checklist" |
